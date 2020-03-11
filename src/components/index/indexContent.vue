@@ -6,7 +6,15 @@
 
 <script>
 export default {
-
+  data () {
+    return {}
+  },
+  mounted () {
+    this.$store.dispatch('updateLoading', true)
+    setTimeout(() => {
+      this.$store.dispatch('updateLoading', false)
+    }, 2000)
+  }
 }
 </script>
 
